@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pak_sos/Widgets/Landing_screen.dart';
+import 'package:pak_sos/Widgets/Login.dart';
 import 'package:pak_sos/pages/Themes.dart';
 import 'package:pak_sos/pages/utils/routes.dart';
 
@@ -15,11 +16,12 @@ class MyApp extends StatelessWidget {
       ////optioanl
       theme: mytheme.lighttheme(context),
 
-      initialRoute: MyRoutes.registeration,
+      initialRoute: MyRoutes.login_sos,
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => const landingpage(),
+        "/": (context) => const login(),
         MyRoutes.registeration: (context) => landingpage(),
+        MyRoutes.login_sos: (context) => login(),
       },
     );
   }

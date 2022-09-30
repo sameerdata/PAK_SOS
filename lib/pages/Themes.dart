@@ -5,7 +5,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 class mytheme {
   static ThemeData lighttheme(BuildContext context) => ThemeData(
-      primarySwatch: Colors.green,
+      primarySwatch: Colors.lightGreen,
       fontFamily: GoogleFonts.lato().fontFamily,
       cardColor: Colors.white,
       canvasColor: whitebright,
@@ -20,6 +20,6 @@ class mytheme {
   static Color whitebright = Color.fromARGB(255, 255, 255, 255);
 
   static Color darkcreamcolor = Vx.gray900;
-  static Color darkgreenish = Color.fromARGB(255, 22, 110, 41);
+  static Color darkgreenish = Color.fromARGB(255, 139, 195, 74);
   static Color lightluishcolor = Vx.indigo500;
 }
