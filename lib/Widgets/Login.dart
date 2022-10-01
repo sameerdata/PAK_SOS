@@ -10,10 +10,10 @@ class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
 
   @override
-  State<login> createState() => _loginState();
+  State<login> createState() => loginState();
 }
 
-class _loginState extends State<login> {
+class loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -92,7 +92,7 @@ class _loginState extends State<login> {
                         side: BorderSide(color: Colors.red)),
                   ),
                   onPressed: () {
-                    Navigator.of(context).pushNamed(MyRoutes.registeration);
+                    Navigator.of(context).pushNamed(MyRoutes.portal_sos);
                   },
                   child: Text(
                     'LOGIN',

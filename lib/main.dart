@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pak_sos/Widgets/Landing_screen.dart';
 import 'package:pak_sos/Widgets/Login.dart';
+import 'package:pak_sos/Widgets/Portal.dart';
+import 'package:pak_sos/Widgets/signup.dart';
 import 'package:pak_sos/pages/Themes.dart';
 import 'package:pak_sos/pages/utils/routes.dart';
 
@@ -16,12 +18,14 @@ class MyApp extends StatelessWidget {
       ////optioanl
       theme: mytheme.lighttheme(context),
 
-      initialRoute: MyRoutes.login_sos,
+      initialRoute: MyRoutes.registeration,
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => const login(),
+        "/": (context) => const landingpage(),
         MyRoutes.registeration: (context) => landingpage(),
         MyRoutes.login_sos: (context) => login(),
+        MyRoutes.Signup_sos: (context) => signup(),
+        MyRoutes.portal_sos: (context) => portal()
       },
     );
   }
