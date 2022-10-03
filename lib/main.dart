@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ////optioanl
       theme: mytheme.lighttheme(context),
 
-      initialRoute: MyRoutes.registeration,
+      initialRoute: MyRoutes.portal_sos,
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => const landingpage(),
