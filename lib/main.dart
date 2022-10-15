@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pak_sos/Widgets/Landing_screen.dart';
 import 'package:pak_sos/Widgets/Login.dart';
+import 'package:pak_sos/Widgets/Police/Police.dart';
 import 'package:pak_sos/Widgets/Portal.dart';
 import 'package:pak_sos/Widgets/signup.dart';
 import 'package:pak_sos/pages/Themes.dart';
@@ -18,14 +19,15 @@ class MyApp extends StatelessWidget {
       ////optioanl
       theme: mytheme.lighttheme(context),
 
-      initialRoute: MyRoutes.portal_sos,
+      initialRoute: MyRoutes.police_sos,
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => const landingpage(),
         MyRoutes.registeration: (context) => landingpage(),
         MyRoutes.login_sos: (context) => login(),
         MyRoutes.Signup_sos: (context) => signup(),
-        MyRoutes.portal_sos: (context) => portal()
+        MyRoutes.portal_sos: (context) => portal(),
+        MyRoutes.police_sos: (context) => police()
       },
     );
   }
