@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pak_sos/Widgets/Landing_screen.dart';
 import 'package:pak_sos/Widgets/Login.dart';
+import 'package:pak_sos/Widgets/Police/Accident_complain.dart';
 import 'package:pak_sos/Widgets/Police/Police.dart';
+import 'package:pak_sos/Widgets/Police/Robbery_complain.dart';
+import 'package:pak_sos/Widgets/Police/Snatching_complain.dart';
 import 'package:pak_sos/Widgets/Portal.dart';
 import 'package:pak_sos/Widgets/signup.dart';
 import 'package:pak_sos/pages/Themes.dart';
@@ -27,7 +30,10 @@ class MyApp extends StatelessWidget {
         MyRoutes.login_sos: (context) => login(),
         MyRoutes.Signup_sos: (context) => signup(),
         MyRoutes.portal_sos: (context) => portal(),
-        MyRoutes.police_sos: (context) => police()
+        MyRoutes.police_sos: (context) => police(),
+        MyRoutes.robbery: (context) => Robbery_complain(),
+        MyRoutes.Snatching: (context) => Snatching_Complain(),
+        MyRoutes.Accident: (context) => Accident_complain()
       },
     );
   }

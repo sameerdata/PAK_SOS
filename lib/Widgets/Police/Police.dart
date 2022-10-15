@@ -4,9 +4,14 @@ import 'package:pak_sos/Widgets/Landing_screen.dart';
 import 'package:pak_sos/pages/Themes.dart';
 import 'package:pak_sos/pages/utils/routes.dart';
 
-class police extends StatelessWidget {
+class police extends StatefulWidget {
   const police({Key? key}) : super(key: key);
 
+  @override
+  State<police> createState() => _policeState();
+}
+
+class _policeState extends State<police> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -71,8 +76,7 @@ class police extends StatelessWidget {
                                 side: BorderSide(color: Colors.red)),
                           ),
                           onPressed: () {
-                            Navigator.of(context)
-                                .pushNamed(MyRoutes.police_sos);
+                            Navigator.of(context).pushNamed(MyRoutes.robbery);
                           },
                           child: Text("Robbery\nComplain",
                               style: TextStyle(
@@ -102,7 +106,7 @@ class police extends StatelessWidget {
                             ),
                             onPressed: () {
                               Navigator.of(context)
-                                  .pushNamed(MyRoutes.police_sos);
+                                  .pushNamed(MyRoutes.Snatching);
                             },
                             child: Text("Snatching\nComplain",
                                 style: TextStyle(
