@@ -146,7 +146,7 @@ class portal extends StatelessWidget {
                             Navigator.of(context)
                                 .pushNamed(MyRoutes.police_sos);
                           },
-                          child: Text("Harrestment\nComplain",
+                          child: Text("Harrestment\n  Complain",
                               style: TextStyle(
                                 backgroundColor: Colors.red.shade700,
                                 fontWeight: FontWeight.bold,
@@ -177,7 +177,7 @@ class portal extends StatelessWidget {
                             Navigator.of(context)
                                 .pushNamed(MyRoutes.police_sos);
                           },
-                          child: Text(" Addtional \nComplain  ",
+                          child: Text(" Addtional \n Complain ",
                               style: TextStyle(
                                 backgroundColor: Colors.red.shade700,
                                 fontWeight: FontWeight.bold,
@@ -208,7 +208,7 @@ class portal extends StatelessWidget {
                             Navigator.of(context)
                                 .pushNamed(MyRoutes.police_sos);
                           },
-                          child: Text("Emergency\nContacts",
+                          child: Text("Emergency\n  Contacts",
                               style: TextStyle(
                                 backgroundColor: Colors.red.shade700,
                                 fontWeight: FontWeight.bold,
