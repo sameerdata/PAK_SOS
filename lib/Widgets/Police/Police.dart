@@ -137,7 +137,7 @@ class _policeState extends State<police> {
                                 side: BorderSide(color: Colors.red)),
                           ),
                           onPressed: () {
-                            Navigator.of(context).pushNamed(MyRoutes.login_sos);
+                            Navigator.of(context).pushNamed(MyRoutes.Accident);
                           },
                           child: Text("Accident\nComplain",
                               style: TextStyle(
