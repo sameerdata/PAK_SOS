@@ -17,7 +17,6 @@ class _policeState extends State<police> {
     return MaterialApp(
         home: Center(
       child: Scaffold(
-        backgroundColor: Colors.white,
         appBar: AppBar(
             centerTitle: true,
             title: const Text(
@@ -27,75 +26,87 @@ class _policeState extends State<police> {
             ),
             backgroundColor: Colors.red.shade700),
         body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 20,
-                ),
-                ////////FOR COMPLAIN BUTTON
-                Container(
-                  //alignment: Alignment.topCenter,
-                  child: TextButton(
-                    autofocus: true,
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(50),
-                        backgroundColor: Colors.red.shade700,
-                        shape: CircleBorder()),
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(MyRoutes.login_sos);
-                    },
-                    child: Text("Call",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
-                          color: Colors.white,
-                        )),
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/red.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 20,
                   ),
-                ),
+                  ////////FOR COMPLAIN BUTTON
+                  Container(
+                    //alignment: Alignment.topCenter,
+                    child: TextButton(
+                      autofocus: true,
+                      style: TextButton.styleFrom(
+                          padding: EdgeInsets.all(50),
+                          backgroundColor: Colors.red.shade700,
+                          shape: CircleBorder()),
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(MyRoutes.login_sos);
+                      },
+                      child: Text("Call",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                            color: Colors.white,
+                          )),
+                    ),
+                  ),
+
 //////////COMPLAIN BUTTON END HERE
 
-                SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Row(
-                    children: [
-                      ///FOR POLICE EMERGENCY
-                      Container(
-                        //   alignment: Alignment.topCenter,
-                        child: TextButton(
-                          autofocus: true,
-                          style: TextButton.styleFrom(
-                            padding: EdgeInsets.all(20),
-                            backgroundColor: Colors.red.shade700,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                                side: BorderSide(color: Colors.red)),
-                          ),
-                          onPressed: () {
-                            Navigator.of(context).pushNamed(MyRoutes.robbery);
-                          },
-                          child: Text("Robbery\nComplain",
-                              style: TextStyle(
-                                backgroundColor: Colors.red.shade700,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25,
-                                color: Colors.white,
-                              )),
-                        ),
-                      ),
-
-                      ///////////POLICE EMERGENCY END HERE
-                      ///
-                      // ignore: avoid_unnecessary_containers
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                        child: Container(
-                          // alignment: Alignment.topCenter,
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                      padding: const EdgeInsets.fromLTRB(100, 10, 100, 10.0),
+                      child: Row(children: [
+                        ///FOR POLICE EMERGENCY
+                        Container(
+                            child: Align(
+                          // alignment: Alignment.bottomCenter,
+                          //   alignment: Alignment.topCenter,
                           child: TextButton(
+                            autofocus: true,
+                            style: TextButton.styleFrom(
+                              padding: EdgeInsets.all(20),
+                              backgroundColor: Colors.red.shade700,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  side: BorderSide(color: Colors.red)),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pushNamed(MyRoutes.robbery);
+                            },
+                            child: Text("Robbery\nComplain",
+                                style: TextStyle(
+                                  backgroundColor: Colors.red.shade700,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Colors.white,
+                                )),
+                          ),
+                        )),
+                      ])),
+///////////////////////roobbery end
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                      padding: const EdgeInsets.fromLTRB(100, 10, 100, 10.0),
+                      child: Row(children: [
+                        ///FOR POLICE EMERGENCY
+                        Container(
+                          child: Align(
+                              child: TextButton(
                             autofocus: true,
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.all(20),
@@ -115,44 +126,24 @@ class _policeState extends State<police> {
                                   fontSize: 25,
                                   color: Colors.white,
                                 )),
-                          ),
-                        ),
-                      ),
-                    ],
+                          )),
+                        )
+                      ])),
+
+/////////////////snatching end
+                  ///
+                  ///
+
+                  SizedBox(
+                    height: 20,
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Row(
-                    children: [
-                      Container(
-//alignment: Alignment.topCenter,
-                        child: TextButton(
-                          autofocus: true,
-                          style: TextButton.styleFrom(
-                            padding: EdgeInsets.all(20),
-                            backgroundColor: Colors.red.shade700,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                                side: BorderSide(color: Colors.red)),
-                          ),
-                          onPressed: () {
-                            Navigator.of(context).pushNamed(MyRoutes.Accident);
-                          },
-                          child: Text("Accident\nComplain",
-                              style: TextStyle(
-                                backgroundColor: Colors.red.shade700,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25,
-                                color: Colors.white,
-                              )),
-                        ),
-                      ),
-                      Container(
-//alignment: Alignment.topCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                          child: TextButton(
+                  Padding(
+                      padding: const EdgeInsets.fromLTRB(100, 10, 100, 10.0),
+                      child: Row(children: [
+                        ///FOR POLICE EMERGENCY
+                        Container(
+                          child: Align(
+                              child: TextButton(
                             autofocus: true,
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.all(20),
@@ -163,22 +154,59 @@ class _policeState extends State<police> {
                             ),
                             onPressed: () {
                               Navigator.of(context)
-                                  .pushNamed(MyRoutes.login_sos);
+                                  .pushNamed(MyRoutes.Accident);
                             },
-                            child: Text("Additional\nSupport",
+                            child: Text("Accident\nComplain",
                                 style: TextStyle(
                                   backgroundColor: Colors.red.shade700,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 25,
                                   color: Colors.white,
                                 )),
-                          ),
-                        ),
-                      ),
-                    ],
+                          )),
+                        )
+                      ])),
+
+                  /////////////////accident
+                  ///
+                  ///
+                  ///
+
+                  ///////////POLICE EMERGENCY END HERE
+                  ///
+                  // ignore: avoid_unnecessary_containers
+
+                  SizedBox(
+                    height: 20,
                   ),
-                ),
-              ],
+                  Container(
+//alignment: Alignment.topCenter,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(100, 10, 100, 10.0),
+                      child: TextButton(
+                        autofocus: true,
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.all(20),
+                          backgroundColor: Colors.red.shade700,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.red)),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(MyRoutes.login_sos);
+                        },
+                        child: Text("Additional\nSupport",
+                            style: TextStyle(
+                              backgroundColor: Colors.red.shade700,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                              color: Colors.white,
+                            )),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
